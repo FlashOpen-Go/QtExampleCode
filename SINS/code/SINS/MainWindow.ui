@@ -18,7 +18,7 @@
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout" stretch="2,1">
       <item>
-       <widget class="QTextEdit" name="textEdit">
+       <widget class="QTextEdit" name="ReceiveText">
         <property name="html">
          <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
@@ -54,42 +54,42 @@ p, li { white-space: pre-wrap; }
         <item>
          <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="1,5">
           <item>
-           <widget class="QLabel" name="label">
+           <widget class="QLabel" name="SerialPortNameLabel">
             <property name="text">
-             <string>TextLabel</string>
+             <string>a </string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QComboBox" name="comboBox_2"/>
+           <widget class="QComboBox" name="SerialPortCbx"/>
           </item>
          </layout>
         </item>
         <item>
          <layout class="QHBoxLayout" name="horizontalLayout_5" stretch="1,2,1,2">
           <item>
-           <widget class="QLabel" name="label_2">
+           <widget class="QLabel" name="OpenStatusLabel">
             <property name="text">
              <string>TextLabel</string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pushButton">
+           <widget class="QPushButton" name="OpenBtn">
             <property name="text">
              <string>PushButton</string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pushButton_3">
+           <widget class="QPushButton" name="ReLoadBtn">
             <property name="text">
              <string>PushButton</string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pushButton_2">
+           <widget class="QPushButton" name="MoreSetBtn">
             <property name="text">
              <string>PushButton</string>
             </property>
@@ -100,14 +100,14 @@ p, li { white-space: pre-wrap; }
         <item>
          <layout class="QHBoxLayout" name="horizontalLayout_6" stretch="1,3">
           <item>
-           <widget class="QLabel" name="label_3">
+           <widget class="QLabel" name="BaudRateLabel">
             <property name="text">
              <string>TextLabel</string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QComboBox" name="comboBox_3"/>
+           <widget class="QComboBox" name="BaudRateCbx"/>
           </item>
          </layout>
         </item>

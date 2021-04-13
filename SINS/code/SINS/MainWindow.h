@@ -13,6 +13,10 @@ class MainWindow : public QMainWindow
 
 public:
     explicit MainWindow(QWidget *parent = nullptr);
+
+    bool Init();
+    bool UIInit();
+
     ~MainWindow();
 
 private:
