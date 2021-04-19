@@ -41,5 +41,6 @@ bool MainWindow::UIInit()
    ui->ReLoadBtn->setText("RL");
    ui->MoreSetBtn->setText("MoreSet");
    ui->BaudRateLabel->setText("BaudRate");
+   ui->SendBtn->setText("Send");
    return ret;
 }
