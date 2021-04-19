@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui serialport
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -27,10 +27,12 @@ CONFIG += c++11
 SOURCES += \
         MainWindowSlot.cpp \
         MainWindowUI.cpp \
+        SerialPortProcess.cpp \
         main.cpp
 
 HEADERS += \
-        MainWindow.h
+        MainWindow.h \
+        SerialPortProcess.h
 
 FORMS += \
         MainWindow.ui
