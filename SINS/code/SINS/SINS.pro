@@ -25,14 +25,14 @@ DEFINES += QT_DEPRECATED_WARNINGS
 CONFIG += c++11
 
 SOURCES += \
+        DataProcess/SerialPort/SerialPortProcess.cpp \
         MainWindowSlot.cpp \
         MainWindowUI.cpp \
-        SerialPortProcess.cpp \
         main.cpp
 
 HEADERS += \
-        MainWindow.h \
-        SerialPortProcess.h
+        DataProcess/SerialPort/SerialPortProcess.h \
+        MainWindow.h
 
 FORMS += \
         MainWindow.ui

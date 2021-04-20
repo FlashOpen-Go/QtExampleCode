@@ -4,10 +4,11 @@
 #include <QSerialPort>
 #include <QSerialPortInfo>
 
-class SerialPortProcess
+class SerialPortProcess : public QObject
 {
 public:
     SerialPortProcess();
+    QStringList GetCanUsePortNameList();
 };
 
 #endif // SERIALPORTPROCESS_H

@@ -42,5 +42,15 @@ bool MainWindow::UIInit()
    ui->MoreSetBtn->setText("MoreSet");
    ui->BaudRateLabel->setText("BaudRate");
    ui->SendBtn->setText("Send");
+   ui->isShowHexCbox->setText("showHEX");
+   ui->isSendByHexCbox->setText("SendByHEX");
+   ui->isSendInTimeCbox->setText("SendEvery");
+   ui->SendTimeLedt->setText("10");
+   ui->TimeLabel->setText("ms/Time");
+   ui->isAddCrLf->setText("AddCrLf");
+   ui->isShowTimeAndPackeCbox->setText("ShowTimeAndPacke");
+   ui->OverTimeLabel->setText("OverTime:");
+   ui->OverTimeLedit->setText("20");
+
    return ret;
 }
