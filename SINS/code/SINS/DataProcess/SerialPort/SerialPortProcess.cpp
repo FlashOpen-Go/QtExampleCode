@@ -11,5 +11,16 @@ SerialPortProcess::SerialPortProcess()
  */
 QStringList SerialPortProcess::GetCanUsePortNameList()
 {
-
+    QStringList Temp_Ret_List;
+    QSerialPort Temp_Seach_Port;
+    foreach(const QSerialPortInfo &info, QSerialPortInfo::availablePorts())
+    {
+        Temp_Seach_Port.setPort(info);
+        if (Temp_Seach_Port.open(QIODevice::ReadWrite))
+        {
+            Temp_Ret_List.append(info.portName());
+            Temp_Seach_Port.close();
+        }
+    }
+    return Temp_Ret_List;
 }

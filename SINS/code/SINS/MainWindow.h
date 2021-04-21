@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "DataProcess/SerialPort/SerialPortProcess.h"
 
 namespace Ui {
 class MainWindow;
@@ -16,11 +17,13 @@ public:
 
     bool Init();
     bool UIInit();
+    bool SerialPortInit();
 
     ~MainWindow();
 
 private:
     Ui::MainWindow *ui;
+    SerialPortProcess m_Port;
 };
 
 #endif // MAINWINDOW_H

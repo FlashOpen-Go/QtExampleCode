@@ -23,6 +23,7 @@ bool MainWindow::Init()
     bool ret = true;
 
     ret &= UIInit();
+    ret &= SerialPortInit();
 
     return ret;
 }
@@ -53,4 +54,16 @@ bool MainWindow::UIInit()
    ui->OverTimeLedit->setText("20");
 
    return ret;
+}
+
+/**
+ * @brief MainWindow::SerialPortInit : 串口部分信息初始化
+ * @return 是否初始化成功
+ */
+bool MainWindow::SerialPortInit()
+{
+    bool ret = true;
+    QStringList Temp_Port_List = m_Port.GetCanUsePortNameList();
+    ui->SerialPortCbx->addItems(Temp_Port_List);
+    return ret;
 }
