@@ -24,3 +24,94 @@ QStringList SerialPortProcess::GetCanUsePortNameList()
     }
     return Temp_Ret_List;
 }
+
+/**
+ * @brief SerialPortProcess::SetPort :设置串口的相关参数
+ * @param PortName
+ * @param BaudRate
+ */
+void SerialPortProcess::SetPort(QString PortName, unsigned int BaudRate)
+{
+    if (!PortName.isEmpty())
+        m_PortInfo.m_PortName = PortName;
+    m_PortInfo.m_BaudRate = BaudRate;
+}
+
+/**
+ * @brief SerialPortProcess::SetPort : 设置串口的相关参数
+ * @param info
+ */
+void SerialPortProcess::SetPort(SerialPortInfo info)
+{
+    m_PortInfo.m_BaudRate = info.m_BaudRate;
+    m_PortInfo.m_PortName = info.m_PortName;
+}
+
+/**
+ * @brief SerialPortProcess::GetPortInfo : 获取串口的相关参数
+ * @return
+ */
+SerialPortInfo SerialPortProcess::GetPortInfo()
+{
+    return m_PortInfo;
+}
+
+/**
+ * @brief SerialPortProcess::Open
+ * @return
+ */
+bool SerialPortProcess::Open()
+{
+
+}
+
+/**
+ * @brief SerialPortProcess::Close
+ * @return
+ */
+bool SerialPortProcess::Close()
+{
+
+}
+
+/**
+ * @brief SerialPortProcess::SendData
+ * @param data
+ * @return
+ */
+bool SerialPortProcess::SendData(QString data)
+{
+
+}
+
+/**
+ * @brief SerialPortProcess::ReadDate
+ * @return
+ */
+QString SerialPortProcess::ReadDate()
+{
+
+}
+
+/**
+ * @brief SerialPortProcess::ReadData
+ * @return
+ */
+QByteArray SerialPortProcess::ReadData()
+{
+
+}
+
+/**
+ * @brief SerialPortProcess::run
+ */
+void SerialPortProcess::run()
+{
+    m_Port = new QSerialPort();
+    QSerialPortInfo Temp_Set_Port_Info;
+//    m_Port->setPort()
+    while(!isInterruptionRequested())
+    {
+
+    }
+}

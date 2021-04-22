@@ -16,9 +16,21 @@ public:
 //class SerialPortProcess : public QObject
 class SerialPortProcess : public QThread
 {
+    Q_OBJECT
 public:
     SerialPortProcess();
     QStringList GetCanUsePortNameList();
+    void SetPort(QString PortName, unsigned int BaudRate);
+    void SetPort(SerialPortInfo info);
+    SerialPortInfo GetPortInfo();
+    bool Open();
+    bool Close();
+    bool SendData(QString data);
+    QString ReadDate();
+    QByteArray ReadData();
+
+signals:
+    void ReadyReadData();
 
 protected:
     void run();
