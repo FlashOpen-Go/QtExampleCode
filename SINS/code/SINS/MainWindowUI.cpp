@@ -24,6 +24,7 @@ bool MainWindow::Init()
 
     ret &= UIInit();
     ret &= SerialPortInit();
+    ret &= SerialPortUIInit();
 
     return ret;
 }
@@ -65,5 +66,32 @@ bool MainWindow::SerialPortInit()
     bool ret = true;
     QStringList Temp_Port_List = m_Port.GetCanUsePortNameList();
     ui->SerialPortCbx->addItems(Temp_Port_List);
+    return ret;
+}
+
+/**
+ * @brief MainWindow::SerialPortUIInit : 串口打开设置相关UI界面初始化，并连接相关槽函数
+ * @return
+ */
+bool MainWindow::SerialPortUIInit()
+{
+    bool ret = true;
+    QStringList Temp_BaudRateList;
+    Temp_BaudRateList.append("115200");
+    Temp_BaudRateList.append("460800");
+    ui->BaudRateCbx->addItems(Temp_BaudRateList);
+    connect(ui->OpenBtn, &QPushButton::clicked, this, &MainWindow::onOpenBtnClicked);
+    connect(ui->ReLoadBtn, &QPushButton::clicked, this, &MainWindow::onReLoadBtnClicked);
+    return ret;
+}
+
+/**
+ * @brief MainWindow::SetUIInit : 数据接收和发送部分相关设置UI初始化
+ * @return
+ */
+bool MainWindow::SetUIInit()
+{
+    bool ret = true;
+
     return ret;
 }
