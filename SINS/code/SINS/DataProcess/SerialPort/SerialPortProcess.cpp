@@ -57,12 +57,16 @@ SerialPortInfo SerialPortProcess::GetPortInfo()
 }
 
 /**
- * @brief SerialPortProcess::Open
- * @return
+ * @brief SerialPortProcess::Open ： 打开串口
+ * @return 返回打开是否成功
  */
 bool SerialPortProcess::Open()
 {
+    if(!m_PortInfo.m_PortName.isEmpty() && m_PortInfo.m_BaudRate != 0)
+    {
 
+    }
+    return false;
 }
 
 /**
@@ -71,7 +75,9 @@ bool SerialPortProcess::Open()
  */
 bool SerialPortProcess::Close()
 {
+    bool ret = true;
 
+    return ret;
 }
 
 /**
@@ -81,7 +87,9 @@ bool SerialPortProcess::Close()
  */
 bool SerialPortProcess::SendData(QString data)
 {
+    bool ret = true;
 
+    return ret;
 }
 
 /**
@@ -90,7 +98,8 @@ bool SerialPortProcess::SendData(QString data)
  */
 QString SerialPortProcess::ReadDate()
 {
-
+    QString Temp_Ret_Data;
+    return Temp_Ret_Data;
 }
 
 /**
@@ -99,7 +108,8 @@ QString SerialPortProcess::ReadDate()
  */
 QByteArray SerialPortProcess::ReadData()
 {
-
+    QByteArray Temp_data;
+    return Temp_data;
 }
 
 /**
